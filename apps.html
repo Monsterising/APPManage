@@ -1,0 +1,292 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<title>APP项目列表</title>
+ 	<link rel="stylesheet" type="text/css" href="public/css/bootstrap.min.css">
+ 	<link rel="stylesheet" type="text/css" href="css/app.css">
+ 	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+ 	<script type="text/javascript" src="public/js/bootstrap.min.js"></script>
+ 	<script type="text/javascript" src="js/vue.js"></script>
+
+ </head>
+ <body style="background: #f5f5f5;">
+ 	<div class="header">
+ 		<nav class="navbar navbar-default" style="background: #fff;">
+ 			<div class="container">
+ 				<!-- Brand and toggle get grouped for better mobile display -->
+ 				<div class="navbar-header">
+ 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+ 						<span class="sr-only">Toggle navigation</span>
+ 						<span class="icon-bar"></span>
+ 						<span class="icon-bar"></span>
+ 						<span class="icon-bar"></span>
+ 					</button>
+ 					<a class="navbar-brand" href="#">Brand > 我的应用</a>
+ 				</div>
+
+ 				<!-- Collect the nav links, forms, and other content for toggling -->
+ 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+ 					<ul class="nav navbar-nav navbar-right">
+ 						<li class="dropdown">
+ 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">用户 <span class="caret"></span></a>
+ 							<ul class="dropdown-menu">
+ 								<li><a href="#">个人信息</a></li>
+ 								<li><a href="#">注销</a></li>
+ 							</ul>
+ 						</li>
+ 					</ul>
+ 				</div><!-- /.navbar-collapse -->
+ 			</div><!-- /.container-fluid -->
+ 		</nav>
+ 	</div>
+ 	<div class="content container" >
+ 		<div class="row">
+ 			<div class="btn-group col-xs-4 col-sm-3" data-toggle="buttons">
+ 				<label  class="btn btn-success col-xs-6">
+ 					<input  type="radio" name="options"> Android
+ 				</label>
+ 				<label  class="btn btn-success col-xs-6">
+ 					<input  type="radio" name="options"> IOS
+ 				</label>
+ 			</div>
+ 			<div class="col-xs-8 col-sm-9">
+				<div class="input-group">
+				    <input type="text" class="form-control" placeholder="Search for...">
+				    <span class="input-group-btn">
+				        <button class="btn btn-default" type="button">Go!</button>
+				    </span>
+				</div><!-- /input-group -->
+ 			</div>
+ 		</div>
+ 	
+ 		<div class="row appList">
+ 			<ul class="list-unstyled">
+ 				<li class="col-sm-4">
+ 					<div class="uploadCard " v-on:click="selectFile"v-on:click="selectFile">
+ 						 <input type="file" id="file" multiple="multiple"  
+            style="filter:alpha(opacity=0);opacity:0;width: 0;height: 0;"/>   
+ 						<p>
+ 							<i class="glyphicon glyphicon-open"></i>
+ 							拖曳上传
+ 						</p>
+ 							
+
+ 					</div>
+ 				</li>
+ 				<li class="col-sm-4">
+ 					<div class="card">
+ 						<div class="appImg">
+ 							<img src="https://oivkbuqoc.qnssl.com/3a4481b98474955eb00c2a089480091baadccd40?t=1509544081.8451004">
+ 						</div>
+ 						<div class="appTitle">
+ 							<h4><i class="glyphicon glyphicon-user"></i>省人大河长制</h4>
+ 						</div>
+ 						<div class="appInfo">
+ 							<table class="table">
+ 								<tr>
+ 									<td>短链接</td>
+ 									<td>http://fir.im/9ba7</td>
+ 								</tr>
+ 								<tr>
+ 									<td>BundleID:</td>
+ 									<td>com.dingchuan.ProvinceRiverPlatform</td>
+ 								</tr>
+ 								<tr>
+ 									<td>最新版本:</td>
+ 									<td>1.1.5 ( Build 1.1.5 )</td>
+ 								</tr>
+ 								<tr>
+ 									<td>打包类型:</td>
+ 									<td>企业类型</td>
+ 								</tr>
+ 							</table>
+ 						</div>
+ 						<div class="appBtn">
+ 							<button class="btn btn-success" type="button"><i class="glyphicon glyphicon-pencil"></i> 编辑</button>
+ 							<button class="btn btn-default" type="button"><i class="glyphicon glyphicon-eye-open"></i> 预览</button>
+ 							<button class="btn btn-default" type="button"><i class="glyphicon glyphicon-trash"></i> 删除</button>
+ 						</div>	
+ 					</div>
+ 				</li>
+ 				<li class="col-sm-4">
+ 					<div class="card">
+ 						<div class="appImg">
+ 							<img src="https://oivkbuqoc.qnssl.com/3a4481b98474955eb00c2a089480091baadccd40?t=1509544081.8451004">
+ 						</div>
+ 						<div class="appTitle">
+ 							<h4><i class="glyphicon glyphicon-user"></i>省人大河长制</h4>
+ 						</div>
+ 						<div class="appInfo">
+ 							<table class="table">
+ 								<tr>
+ 									<td>短链接</td>
+ 									<td>http://fir.im/9ba7</td>
+ 								</tr>
+ 								<tr>
+ 									<td>BundleID:</td>
+ 									<td>com.dingchuan.ProvinceRiverPlatform</td>
+ 								</tr>
+ 								<tr>
+ 									<td>最新版本:</td>
+ 									<td>1.1.5 ( Build 1.1.5 )</td>
+ 								</tr>
+ 								<tr>
+ 									<td>打包类型:</td>
+ 									<td>企业类型</td>
+ 								</tr>
+ 							</table>
+ 						</div>
+ 						<div class="appBtn">
+ 							<button class="btn btn-success" type="button"><i class="glyphicon glyphicon-pencil"></i> 编辑</button>
+ 							<button class="btn btn-default" type="button"><i class="glyphicon glyphicon-eye-open"></i> 预览</button>
+ 							<button class="btn btn-default" type="button"><i class="glyphicon glyphicon-trash"></i> 删除</button>
+ 						</div>	
+ 					</div>
+ 				</li>
+ 				<li class="col-sm-4">
+ 					<div class="card">
+ 						<div class="appImg">
+ 							<img src="https://oivkbuqoc.qnssl.com/3a4481b98474955eb00c2a089480091baadccd40?t=1509544081.8451004">
+ 						</div>
+ 						<div class="appTitle">
+ 							<h4><i class="glyphicon glyphicon-user"></i>省人大河长制</h4>
+ 						</div>
+ 						<div class="appInfo">
+ 							<table class="table">
+ 								<tr>
+ 									<td>短链接</td>
+ 									<td>http://fir.im/9ba7</td>
+ 								</tr>
+ 								<tr>
+ 									<td>BundleID:</td>
+ 									<td>com.dingchuan.ProvinceRiverPlatform</td>
+ 								</tr>
+ 								<tr>
+ 									<td>最新版本:</td>
+ 									<td>1.1.5 ( Build 1.1.5 )</td>
+ 								</tr>
+ 								<tr>
+ 									<td>打包类型:</td>
+ 									<td>企业类型</td>
+ 								</tr>
+ 							</table>
+ 						</div>
+ 						<div class="appBtn">
+ 							<button class="btn btn-success" type="button"><i class="glyphicon glyphicon-pencil"></i> 编辑</button>
+ 							<button class="btn btn-default" type="button"><i class="glyphicon glyphicon-eye-open"></i> 预览</button>
+ 							<button class="btn btn-default" type="button"><i class="glyphicon glyphicon-trash"></i> 删除</button>
+ 						</div>	
+ 					</div>
+ 				</li>
+ 				<li class="col-sm-4">
+ 					<div class="card">
+ 						<div class="appImg">
+ 							<img src="https://oivkbuqoc.qnssl.com/3a4481b98474955eb00c2a089480091baadccd40?t=1509544081.8451004">
+ 						</div>
+ 						<div class="appTitle">
+ 							<h4><i class="glyphicon glyphicon-user"></i>省人大河长制</h4>
+ 						</div>
+ 						<div class="appInfo">
+ 							<table class="table">
+ 								<tr>
+ 									<td>短链接</td>
+ 									<td>http://fir.im/9ba7</td>
+ 								</tr>
+ 								<tr>
+ 									<td>BundleID:</td>
+ 									<td>com.dingchuan.ProvinceRiverPlatform</td>
+ 								</tr>
+ 								<tr>
+ 									<td>最新版本:</td>
+ 									<td>1.1.5 ( Build 1.1.5 )</td>
+ 								</tr>
+ 								<tr>
+ 									<td>打包类型:</td>
+ 									<td>企业类型</td>
+ 								</tr>
+ 							</table>
+ 						</div>
+ 						<div class="appBtn">
+ 							<button class="btn btn-success" type="button"><i class="glyphicon glyphicon-pencil"></i> 编辑</button>
+ 							<button class="btn btn-default" type="button"><i class="glyphicon glyphicon-eye-open"></i> 预览</button>
+ 							<button class="btn btn-default" type="button"><i class="glyphicon glyphicon-trash"></i> 删除</button>
+ 						</div>	
+ 					</div>
+ 				</li>
+ 				<li class="col-sm-4">
+ 					<div class="card">
+ 						<div class="appImg">
+ 							<img src="https://oivkbuqoc.qnssl.com/3a4481b98474955eb00c2a089480091baadccd40?t=1509544081.8451004">
+ 						</div>
+ 						<div class="appTitle">
+ 							<h4><i class="glyphicon glyphicon-user"></i>省人大河长制</h4>
+ 						</div>
+ 						<div class="appInfo">
+ 							<table class="table">
+ 								<tr>
+ 									<td>短链接</td>
+ 									<td>http://fir.im/9ba7</td>
+ 								</tr>
+ 								<tr>
+ 									<td>BundleID:</td>
+ 									<td>com.dingchuan.ProvinceRiverPlatform</td>
+ 								</tr>
+ 								<tr>
+ 									<td>最新版本:</td>
+ 									<td>1.1.5 ( Build 1.1.5 )</td>
+ 								</tr>
+ 								<tr>
+ 									<td>打包类型:</td>
+ 									<td>企业类型</td>
+ 								</tr>
+ 							</table>
+ 						</div>
+ 						<div class="appBtn">
+ 							<button class="btn btn-success" type="button"><i class="glyphicon glyphicon-pencil"></i> 编辑</button>
+ 							<button class="btn btn-default" type="button"><i class="glyphicon glyphicon-eye-open"></i> 预览</button>
+ 							<button class="btn btn-default" type="button"><i class="glyphicon glyphicon-trash"></i> 删除</button>
+ 						</div>	
+ 					</div>
+ 				</li>
+ 				<li class="col-sm-4">
+ 					<div class="card">
+ 						<div class="appImg">
+ 							<img src="https://oivkbuqoc.qnssl.com/3a4481b98474955eb00c2a089480091baadccd40?t=1509544081.8451004">
+ 						</div>
+ 						<div class="appTitle">
+ 							<h4><i class="glyphicon glyphicon-user"></i>省人大河长制</h4>
+ 						</div>
+ 						<div class="appInfo">
+ 							<table class="table">
+ 								<tr>
+ 									<td>短链接</td>
+ 									<td>http://fir.im/9ba7</td>
+ 								</tr>
+ 								<tr>
+ 									<td>BundleID:</td>
+ 									<td>com.dingchuan.ProvinceRiverPlatform</td>
+ 								</tr>
+ 								<tr>
+ 									<td>最新版本:</td>
+ 									<td>1.1.5 ( Build 1.1.5 )</td>
+ 								</tr>
+ 								<tr>
+ 									<td>打包类型:</td>
+ 									<td>企业类型</td>
+ 								</tr>
+ 							</table>
+ 						</div>
+ 						<div class="appBtn">
+ 							<button class="btn btn-success" type="button"><i class="glyphicon glyphicon-pencil"></i> 编辑</button>
+ 							<button class="btn btn-default" type="button"><i class="glyphicon glyphicon-eye-open"></i> 预览</button>
+ 							<button class="btn btn-default" type="button"><i class="glyphicon glyphicon-trash"></i> 删除</button>
+ 						</div>	
+ 					</div>
+ 				</li>	
+ 			</ul>
+ 		</div>
+ 	</div>
+
+ 	<script src="js/app.js"></script>
+ </body>
+ </html>

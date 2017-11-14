@@ -1,0 +1,64 @@
+.appList{
+	margin-top: 20px;
+}
+.appList li{
+	height: 454px;
+	margin-bottom: 20px;
+}
+.appList li .card{
+	background: #fff;
+	cursor: pointer;
+	padding: 44px;
+
+}
+.appList li .card:hover{
+	box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.appList li .card >div{
+	margin:10px 0;
+}
+.appList li .card .appImg{
+	margin-bottom: 40px;
+}
+.appList li .card .appImg img{
+	width: 100px;
+	height: 100px;
+	border-radius: 10px;
+}
+.appList li .card .appTitle i{
+	color:#F8BA0B;
+	margin-right: 10px;
+}
+.appList li .card .appTitle h4{
+	color:#999;
+}
+.appList li .card .appInfo table{
+	table-layout: fixed;
+	width: 100%;
+}
+.appList li .card .appInfo td{
+	overflow: hidden; 
+	border-width: 0; 
+	padding: 5px 0;
+	white-space: nowrap;
+	text-overflow: ellipsis
+}
+.appList li .card .appInfo td:first-child{
+	color:#999;
+}
+.uploadCard{
+	cursor: pointer
+}
+.uploadCard:hover .glyphicon-open{
+	font-size:50px
+}
+.appList li .uploadCard{
+	background: #F8BA0B;
+	color: #fff;
+	height: 100%;
+	line-height: 454px;
+	text-align: center;
+	font-size: 24px;
+}
+
+/*改变图标大小*/
