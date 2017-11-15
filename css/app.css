@@ -47,7 +47,16 @@
 	color:#999;
 }
 .uploadCard{
-	cursor: pointer
+	cursor: pointer;
+	position: relative;
+}
+.uploadCard input[type="file"]{
+	position: absolute;
+	filter:alpha(opacity=0);
+	opacity:0;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
 }
 .uploadCard:hover .glyphicon-open{
 	font-size:50px
